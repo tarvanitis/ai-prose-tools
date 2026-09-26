@@ -1,0 +1,73 @@
+# B17b spelling dialect data, loaded by scripts/scan.py.
+# Edit this file to add a word. Do not edit the regex in scan.py.
+#
+# Three sections. Lines starting with # are comments; blank lines ignored.
+
+[pairs]
+# british = american   (whole-word, case-insensitive, case restored on output)
+behaviour    = behavior
+behaviours   = behaviors
+behavioural  = behavioral
+colour       = color
+colours      = colors
+coloured     = colored
+neighbour    = neighbor
+neighbours   = neighbors
+neighbourhood = neighborhood
+favour       = favor
+favours      = favors
+favourite    = favorite
+favourites   = favorites
+labour       = labor
+honour       = honor
+rigour       = rigor
+vigour       = vigor
+centre       = center
+centres      = centers
+centred      = centered
+metre        = meter
+metres       = meters
+fibre        = fiber
+calibre      = caliber
+theatre      = theater
+modelling    = modeling
+modelled     = modeled
+labelling    = labeling
+labelled     = labeled
+cancelled    = canceled
+travelled    = traveled
+signalling   = signaling
+analyse      = analyze
+analysed     = analyzed
+analysing    = analyzing
+analyses     = analyzes
+paralyse     = paralyze
+practise     = practice
+catalogue    = catalog
+licence      = license
+defence      = defense
+offence      = offense
+whilst       = while
+amongst      = among
+towards      = toward
+grey         = gray
+aluminium    = aluminum
+programme    = program
+storey       = story
+sceptical    = skeptical
+manoeuvre    = maneuver
+
+[suffix]
+# Productive rules that cannot be enumerated word by word.
+# A stem of >= 3 characters followed by these endings flips -is- to -iz-.
+ise ises ised ising isation isations iser isers
+
+[same-in-both]
+# Spelled identically in British and American English. A naive -ise -> -ize
+# substitution mangles these into advertizing / surprizing / unsupervized, so they
+# are matched as stems and never flagged.
+wise rise prise advertis exercis promis surpris precis concis revis compromis
+supervis unsupervis compris aris otherwis likewis nois rais prais franchis
+merchandis disguis expertis premis paradis devis demis excis chastis despis
+improvis televis advis appris enterpris ris
+pairwis elementwis stepwis clockwis blockwis rowwis columnwis layerwis tokenwis
